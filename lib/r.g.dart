@@ -102,6 +102,18 @@ class _R_Image_AssetResource {
 // ignore: camel_case_types
 class _R_Svg_AssetResource {
   const _R_Svg_AssetResource();
+
+  /// asset: assets/images/icon_input_paste_normal.svg
+  // ignore: non_constant_identifier_names
+  final icon_input_paste_normal = const AssetResource(
+      "assets/images/icon_input_paste_normal.svg",
+      packageName: null);
+
+  /// asset: assets/images/icon_links_clear.svg
+  // ignore: non_constant_identifier_names
+  final icon_links_clear = const AssetResource(
+      "assets/images/icon_links_clear.svg",
+      packageName: null);
 }
 
 // ignore: camel_case_types
@@ -129,6 +141,23 @@ class _R_Svg {
   const _R_Svg();
 
   final asset = const _R_Svg_AssetResource();
+
+  /// asset: assets/images/icon_input_paste_normal.svg
+  // ignore: non_constant_identifier_names
+  AssetSvg icon_input_paste_normal(
+      {required double width, required double height}) {
+    final imageProvider = AssetSvg(asset.icon_input_paste_normal.keyName,
+        width: width, height: height);
+    return imageProvider;
+  }
+
+  /// asset: assets/images/icon_links_clear.svg
+  // ignore: non_constant_identifier_names
+  AssetSvg icon_links_clear({required double width, required double height}) {
+    final imageProvider =
+        AssetSvg(asset.icon_links_clear.keyName, width: width, height: height);
+    return imageProvider;
+  }
 }
 
 /// This `_R_Text` class is generated and contains references to static text asset resources.
