@@ -119,6 +119,11 @@ class _R_Svg_AssetResource {
 // ignore: camel_case_types
 class _R_Text_AssetResource {
   const _R_Text_AssetResource();
+
+  /// asset: assets/lottie/loading.json
+  // ignore: non_constant_identifier_names
+  final loading_json =
+      const AssetResource("assets/lottie/loading.json", packageName: null);
 }
 
 /// This `_R_Image` class is generated and contains references to static non-svg type image asset resources.
@@ -166,6 +171,13 @@ class _R_Text {
   const _R_Text();
 
   final asset = const _R_Text_AssetResource();
+
+  /// asset: assets/lottie/loading.json
+  // ignore: non_constant_identifier_names
+  Future<String> loading_json() {
+    final str = rootBundle.loadString(asset.loading_json.keyName);
+    return str;
+  }
 }
 
 /// This `_R_FontFamily` class is generated and contains references to static font asset resources.

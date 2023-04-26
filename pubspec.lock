@@ -191,6 +191,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  fluwx_no_pay:
+    dependency: "direct main"
+    description:
+      name: fluwx_no_pay
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.13.1"
+  getuiflut:
+    dependency: "direct main"
+    description:
+      name: getuiflut
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.2.18"
   html:
     dependency: "direct main"
     description:

@@ -5,6 +5,8 @@ import 'package:flutter_tools/utils/loading_utils.dart';
 import 'package:flutter_tools/utils/package_info_util.dart';
 import 'package:permission_handler/permission_handler.dart';
 
+import 'device_info_utils.dart';
+
 /// @Title   App权限相关工具类
 /// @Author: zhoubo
 /// @CreateDate:  5/31/21 5:23 PM
@@ -33,7 +35,8 @@ class PermissionUtil {
     if (Platform.isIOS) {
       permission = Permission.photos;
     } else if (Platform.isAndroid) {
-      if ((DeviceInfoUtils.androidInfo?.version.sdkInt ?? 30) <= 32) {
+      if ((DeviceInfoUtils.instance.androidDeviceInfo?.version.sdkInt ?? 30) <=
+          32) {
         permission = Permission.storage;
       } else {
         permission = Permission.photos;

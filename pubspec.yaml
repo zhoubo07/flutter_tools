@@ -28,6 +28,10 @@ dependencies:
   flutter_smart_dialog: ^4.7.1
   html: ^0.15.0
   lottie: ^2.0.0
+  # 微信分享
+  fluwx_no_pay: 3.13.1
+  # 个推：https://github.com/GetuiLaboratory/getui-flutter-plugin
+  getuiflut: ^0.2.18
   r_dart_library:
     git:
       url: 'https://github.com/YK-Unit/r_dart_library.git'
@@ -38,6 +42,7 @@ flutter:
   - assets/images/ic_back_black.png
   - assets/images/icon_input_paste_normal.svg
   - assets/images/icon_links_clear.svg
+  - assets/lottie/loading.json
 flr:
   core_version: 3.2.0
   dartfmt_line_length: 80

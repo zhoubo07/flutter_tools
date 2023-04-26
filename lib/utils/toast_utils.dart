@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 
-class LoadingUtils {
-  factory LoadingUtils() => _instance;
-  static final LoadingUtils _instance = LoadingUtils._internal();
+import '../widgets/loading_view.dart';
 
-  LoadingUtils._internal();
+class ToastUtils {
+  factory ToastUtils() => _instance;
+  static final ToastUtils _instance = ToastUtils._internal();
 
-  static TransitionBuilder init({TransitionBuilder? builder}) {
+  ToastUtils._internal();
+
+  static TransitionBuilder init({
+    TransitionBuilder? builder,
+  }) {
     return FlutterSmartDialog.init(builder: builder);
   }
 
@@ -16,21 +20,23 @@ class LoadingUtils {
   /// 加载框是否正在展示
   static bool get isLoadingShowing => SmartDialog.config.isExistLoading;
 
-  static Future<void> showLoading(
-      {bool? clickBgDismiss = false,
-      bool? backDismiss = true,
-      bool? usePenetrate,
-      Color? maskColor,
-      String? text,
-      TextStyle? textStyle,
-      Duration? duration}) {
+  static Future<void> showLoading({
+    bool? clickBgDismiss = false,
+    bool? backDismiss = true,
+    bool? usePenetrate,
+    Color? maskColor,
+    String? text,
+    TextStyle? textStyle,
+    Duration? duration,
+  }) {
+    if (isLoadingShowing) return Future.value();
     return SmartDialog.showLoading(
       builder: (context) => text != null
-          ? Column(mainAxisSize: MainAxisSize.min, children: [
-              const CircularProgressIndicator(),
-              Text(text, style: textStyle)
-            ])
-          : const CircularProgressIndicator(),
+          ? Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [const LoadingView(), Text(text, style: textStyle)],
+            )
+          : const LoadingView(),
       maskColor: maskColor ?? Colors.transparent,
       clickMaskDismiss: clickBgDismiss,
       backDismiss: backDismiss,
@@ -96,28 +102,32 @@ class LoadingUtils {
   /// 获取带指示器的文本显示组件
   static Widget _getIndicatorTextWidget(String? text, Widget icon) {
     return Container(
-        margin: const EdgeInsets.all(50.0),
-        decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.9), // 可传
-          borderRadius: BorderRadius.circular(10),
-        ),
-        constraints: const BoxConstraints(minWidth: 100),
-        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Container(
-                margin: text?.isNotEmpty == true
-                    ? const EdgeInsets.only(bottom: 10.0)
-                    : EdgeInsets.zero,
-                child: icon,
-              ),
-              if (text != null && text.isNotEmpty)
-                Text(text,
-                    style: const TextStyle(color: Colors.white, fontSize: 15),
-                    textAlign: TextAlign.center)
-            ]));
+      margin: const EdgeInsets.all(50.0),
+      decoration: BoxDecoration(
+        color: Colors.black.withOpacity(0.9), // 可传
+        borderRadius: BorderRadius.circular(10),
+      ),
+      constraints: const BoxConstraints(minWidth: 100),
+      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 20.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Container(
+            margin: text?.isNotEmpty == true
+                ? const EdgeInsets.only(bottom: 10.0)
+                : EdgeInsets.zero,
+            child: icon,
+          ),
+          if (text != null && text.isNotEmpty)
+            Text(
+              text,
+              style: const TextStyle(color: Colors.white, fontSize: 15),
+              textAlign: TextAlign.center,
+            ),
+        ],
+      ),
+    );
   }
 }
