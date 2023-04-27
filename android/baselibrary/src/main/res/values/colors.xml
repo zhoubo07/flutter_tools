@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="harf_black">#80000000</color>
+    <color name="pinkEF5">#ef508d</color>
+    <color name="gray999">#999999</color>
+    <color name="grayeee">#EEEEEE</color>
+    <color name="gray666">#666666</color>
+    <color name="grayE2">#e2e2e2</color>
+    <color name="gray94">#949494</color>
+    <color name="gray8F">#8F8F8F</color>
+    <color name="gray333">#333333</color>
+    <color name="orange">#FF6633</color>
+    <color name="blue037">#037BFF</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

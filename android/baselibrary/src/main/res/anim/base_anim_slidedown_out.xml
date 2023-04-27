@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--向下滑动，从屏幕滑出屏幕-->
+<set android:interpolator="@android:anim/accelerate_interpolator"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:duration="200">
+	<translate
+		android:duration="@android:integer/config_mediumAnimTime"
+		android:fromYDelta="0%p"
+		android:toYDelta="100%p" />
+	<alpha
+		android:duration="@android:integer/config_mediumAnimTime"
+		android:fromAlpha="1.0"
+		android:toAlpha="0.0" />
+</set>

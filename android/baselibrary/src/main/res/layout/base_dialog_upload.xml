@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--android:background="@drawable/shape"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_dialog_zhengzai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="正在上传" />
+
+        <TextView
+            android:id="@+id/tv_dialog_uploadnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_dialog_zhengzai"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tv_dialog_tvDownloadSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dialog_uploadnum"
+            android:layout_marginLeft="10dp"
+            android:text="--/--" />
+
+        <TextView
+            android:id="@+id/tv_NetSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dialog_uploadnum"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="0k/s" />
+
+        <ProgressBar
+            android:id="@+id/pb_dialog"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_NetSpeed"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="3dp"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tv_Progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pb_dialog"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="0%" />
+
+        <Button
+            android:id="@+id/btn_cancle_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_Progress"
+            android:layout_centerHorizontal="true"
+            android:text="取消上传"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

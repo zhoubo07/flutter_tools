@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            consumerProguardFiles 'proguard-rules.pro'
+        }
+    }
+
+    /*解决PictureSelector和rxjava的冲突*/
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.design
+    api rootProject.ext.dependencies.multidex
+    api rootProject.ext.dependencies.constraint
+    api rootProject.ext.dependencies.recyclerview
+    api rootProject.ext.dependencies.okgo
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.okrx2
+    api rootProject.ext.dependencies.BaseRecyclerViewAdapterHelper
+    api rootProject.ext.dependencies.glide
+    api rootProject.ext.dependencies.logger
+    api rootProject.ext.dependencies.arouter_api
+    api rootProject.ext.dependencies.updatelib
+}

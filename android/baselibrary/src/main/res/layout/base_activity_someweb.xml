@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.dengyun.baselibrary.widgets.toolbar.BaseOneRightToolBar
+        android:id="@+id/toolbar_someweb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/basetool_height"></com.dengyun.baselibrary.widgets.toolbar.BaseOneRightToolBar>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_someweb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_someweb">
+        <com.dengyun.baselibrary.widgets.JudgeNestedWebview
+            android:id="@+id/webview_someweb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_someweb"
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:layout_below="@+id/toolbar_someweb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progressDrawable="@drawable/base_webprogressbar"
+        android:visibility="visible"/>
+</RelativeLayout>

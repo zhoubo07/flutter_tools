@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="left_text" format="string" />
+    <attr name="right_text" format="string" />
+    <attr name="emptyView" format="reference" />
+    <attr name="errorView" format="reference" />
+    <attr name="loadingView" format="reference" />
+    <attr name="emptyViewDrawable" format="reference" />
+    <attr name="emptyViewText" format="string" />
+    <attr name="errorViewDrawable" format="reference" />
+    <attr name="errorViewText" format="string" />
+    <attr name="loadingViewText" format="string" />
+
+    <attr name="is_left_bold" format="boolean" />
+    <attr name="is_right_bold" format="boolean" />
+
+    <attr name="inputType">
+        <flag name="none" value="0x00000000" />
+        <flag name="text" value="0x00000001" />
+        <flag name="textCapCharacters" value="0x00001001" />
+        <flag name="textCapWords" value="0x00002001" />
+        <flag name="textCapSentences" value="0x00004001" />
+        <flag name="textAutoCorrect" value="0x00008001" />
+        <flag name="textAutoComplete" value="0x00010001" />
+        <flag name="textMultiLine" value="0x00020001" />
+        <flag name="textImeMultiLine" value="0x00040001" />
+        <flag name="textNoSuggestions" value="0x00080001" />
+        <flag name="textUri" value="0x00000011" />
+        <flag name="textEmailAddress" value="0x00000021" />
+        <flag name="textEmailSubject" value="0x00000031" />
+        <flag name="textShortMessage" value="0x00000041" />
+        <flag name="textLongMessage" value="0x00000051" />
+        <flag name="textPersonName" value="0x00000061" />
+        <flag name="textPostalAddress" value="0x00000071" />
+        <flag name="textPassword" value="0x00000081" />
+        <flag name="textVisiblePassword" value="0x00000091" />
+        <flag name="textWebEditText" value="0x000000a1" />
+        <flag name="textFilter" value="0x000000b1" />
+        <flag name="textPhonetic" value="0x000000c1" />
+        <flag name="textWebEmailAddress" value="0x000000d1" />
+        <flag name="textWebPassword" value="0x000000e1" />
+        <flag name="number" value="0x00000002" />
+        <flag name="numberSigned" value="0x00001002" />
+        <flag name="numberDecimal" value="0x00002002" />
+        <flag name="numberPassword" value="0x00000012" />
+        <flag name="phone" value="0x00000003" />
+        <flag name="datetime" value="0x00000004" />
+        <flag name="date" value="0x00000014" />
+        <flag name="time" value="0x00000024" />
+    </attr>
+    <attr name="imeOptions">
+        <flag name="normal" value="0x00000000" />
+        <flag name="actionUnspecified" value="0x00000000" />
+        <flag name="actionNone" value="0x00000001" />
+        <flag name="actionGo" value="0x00000002" />
+        <flag name="actionSearch" value="0x00000003" />
+        <flag name="actionSend" value="0x00000004" />
+        <flag name="actionNext" value="0x00000005" />
+        <flag name="actionDone" value="0x00000006" />
+        <flag name="actionPrevious" value="0x00000007" />
+        <flag name="flagNoPersonalizedLearning" value="0x1000000" />
+        <flag name="flagNoFullscreen" value="0x2000000" />
+        <flag name="flagNavigatePrevious" value="0x4000000" />
+        <flag name="flagNavigateNext" value="0x8000000" />
+        <flag name="flagNoExtractUi" value="0x10000000" />
+        <flag name="flagNoAccessoryAction" value="0x20000000" />
+        <flag name="flagNoEnterAction" value="0x40000000" />
+        <flag name="flagForceAscii" value="0x80000000" />
+    </attr>
+
+    <declare-styleable name="StateLayout">
+        <attr name="errorDrawable" format="reference" />
+        <attr name="emptyDrawable" format="reference" />
+        <attr name="progressView" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseToolBar">
+        <attr name="left_icon" format="reference" />
+        <attr name="left_text" />
+        <attr name="left_text_color" format="color" />
+        <attr name="left_text_size" format="dimension" />
+        <attr name="is_left_bold" />
+        <attr name="is_title_bold" format="boolean" />
+        <attr name="toolbar_title" format="string" />
+        <attr name="is_show_elevation" format="boolean" />
+        <attr name="is_hide_left" format="boolean" />
+        <attr name="title_text_color" format="color" />
+        <attr name="title_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseOneRightToolBar">
+        <attr name="right_icon" format="reference" />
+        <attr name="right_text" />
+        <attr name="right_text_color" format="color" />
+        <attr name="right_text_size" format="dimension" />
+        <attr name="is_right_bold" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ClearAllEditText">
+        <attr name="clear_pic" format="reference" />    <!-- 清除全部的按钮icon -->
+        <attr name="textColor" format="color" />        <!-- edt的文字颜色 -->
+        <attr name="textColorHint" format="color" />    <!-- edt的提示文字颜色 -->
+        <attr name="textSize" format="dimension"/>      <!-- edt的文字大小 -->
+        <attr name="hint"/>                             <!-- edt的提示文案 -->
+        <attr name="text" format="string"/>             <!-- edt的内容文案 -->
+        <attr name="maxLength" format="integer" />      <!-- edt的最大输入数量 -->
+        <attr name="singleLine" format="boolean" />     <!-- 是否单行显示 -->
+        <attr name="inputType" />                       <!-- 输入类型 -->
+        <attr name="imeOptions" />                      <!-- 键盘完成键的自定义 -->
+        <attr name="textCursorDrawable" format="reference" />    <!-- 光标设置 -->
+        <attr name="cursorVisible" format="boolean"  />   <!-- 是否显示光标 -->
+        <attr name="digits" format="string"/>           <!-- 限制输入的字符 -->
+    </declare-styleable>
+    <declare-styleable name="MyItemView">
+        <attr name="left_pic" format="reference" />         <!-- 左侧图片icon -->
+        <attr name="left_text" />                          <!-- 左侧文字 -->
+        <attr name="right_text" />                         <!-- 右侧文字 -->
+        <attr name="is_left_bold"  />                       <!-- 左侧文字加粗 -->
+        <attr name="is_right_bold" />                       <!-- 右侧文字加粗 -->
+        <attr name="left_textSize" format="dimension" />    <!-- 左侧文字大小 -->
+        <attr name="right_textSize" format="dimension" />   <!-- 右侧文字大小 -->
+        <attr name="all_textSize" format="dimension" />     <!-- 全部文字大小，设置了此属性就不用设置左右文字大小 -->
+        <attr name="left_textColor" format="color" />       <!-- 左侧文字颜色 -->
+        <attr name="right_textColor" format="color" />      <!-- 右侧文字颜色 -->
+        <attr name="right_pic" format="reference" />        <!-- 右侧图片icon -->
+        <attr name="item_height" format="dimension" />      <!-- 此模板view高度 -->
+        <attr name="item_background" format="reference|color" />  <!-- view背景颜色/图片 -->
+        <attr name="show_topline" format="boolean" />       <!-- 是否显示上方的分割线 -->
+        <attr name="show_bottomline" format="boolean" />    <!-- 是否显示下方的分割线 -->
+        <attr name="line_color" format="color" />           <!-- 分割线颜色 -->
+        <attr name="left_margin" format="dimension" />      <!-- 左侧距离的margin -->
+        <attr name="left_drawable_padding" format="dimension" />      <!-- 左侧drawable_padding -->
+        <attr name="right_margin" format="dimension" />     <!-- 右侧距离的margin -->
+        <attr name="right_drawable_padding" format="dimension" />     <!-- 右侧drawable_padding -->
+        <attr name="show_titleliftpic" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="StateRelativeLayout">
+        <attr name="emptyView" />
+        <attr name="errorView" />
+        <attr name="loadingView" />
+        <attr name="emptyViewDrawable" />
+        <attr name="emptyViewText" />
+        <attr name="errorViewDrawable" />
+        <attr name="errorViewText" />
+        <attr name="loadingViewText" />
+        <attr name="noNetworkView" format="reference" />
+        <attr name="contentView" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr name="image_ratio" format="float" />
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="PicRecycleView">
+        <attr name="column_num" format="integer" />  <!-- 设置有几列 -->
+        <attr name="max_num" format="integer" />     <!-- 设置最多的图片数 -->
+        <attr name="add_pic" format="reference" />   <!-- 设置一直在最后的那个添加图片的icon -->
+    </declare-styleable>
+    <declare-styleable name="TextImageView">
+        <attr name="drawableLeftWidth" format="dimension"/>
+        <attr name="drawableLeftHeight" format="dimension"/>
+        <attr name="drawableTopWidth" format="dimension"/>
+        <attr name="drawableTopHeight" format="dimension"/>
+        <attr name="drawableRightWidth" format="dimension"/>
+        <attr name="drawableRightHeight" format="dimension"/>
+        <attr name="drawableBottomWidth" format="dimension"/>
+        <attr name="drawableBottomHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="StrokeTextView">
+        <attr name="strokeWidth" format="dimension"/><!-- 描边宽度 -->
+        <attr name="strokeColor" format="color" />   <!-- 描边颜色 -->
+    </declare-styleable>
+
+</resources>
